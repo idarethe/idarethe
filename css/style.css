@@ -1,0 +1,17 @@
+html{
+    background:hsl(0, 0%, 14%);
+}
+ 
+.input-field{
+    position: absolute;
+    top: 30px;
+}
+
+.typing-text p span.correct{
+    color: green;
+    font-weight: 600;
+}
+
+.typing-text p span.wrong{
+    color: red;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SpeedType - покажи свою скорость</title>
+</head>
+<nav class="navbar ml-6 mr-6 box " role="navigation" aria-label="main navigation">
+    <div class="navbar-brand field">
+      <a class="navbar-item is-size-5 mt-2" href="index.php">
+       SpeedType
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.php">
+          Главная
+        </a>
+  
+        <a class="navbar-item" href="instruction.php">
+          Инструкция
+        </a>
+          <a class=" navbar-item" href="rating.php">
+            Рейтинг
+          </a>
+        </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button has-background-dark has-text-primary-light">
+              <strong>Вход</strong>
+            </a>
+            <a class="button is-light">
+              Регистрация
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <div class="box ml-6 mr-6">
+      <input type="text" class="input-field">
+      <div class="content-box">
+        <div class="typing-text box">
+          <p></p>
+        </div>
+        <div class="content">
+          <div class="result is-flex is-justify-content-space-around is-flex-wrap-wrap box">
+            <p class="time">
+              Время(сек):
+              <span>60</span>
+            </p>
+            <p class="error">
+              Ошибки:
+              <span>0</span>
+            </p>
+            <p class="CPM">
+              Символов в минуту:
+              <span>0</span>
+            </p>
+            <button class="again button is-link">Давай по новой</button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+</body>
+
+
+<script src="js/script.js"></script>
+  <script>
+      //Бургер меню
+      document.addEventListener('DOMContentLoaded', () => {
+  
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+  
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+  
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+  
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+  
+      });
+    });
+  }
+  
+  });
+  
+  $(document).ready(function() {
+  
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+  
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+  
+  });
+  });
+  </script>
+  
+  </html>
